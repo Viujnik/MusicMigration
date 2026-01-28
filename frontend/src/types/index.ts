@@ -1,0 +1,37 @@
+export interface User {
+  id: number;
+  username: string;
+  age: number;
+  email: string;
+}
+
+export interface AuthResponse {
+  access_token: string;
+  refresh_token: string;
+  token_type: string;
+}
+
+export interface UploadResponse {
+  status: boolean;
+  count: number;
+  ids: string[];
+}
+
+export interface LoginData {
+  username: string;
+  password: string;
+}
+
+export interface RegisterData {
+  username: string;
+  email: string;
+  age: number;
+  password: string;
+}
+
+export interface UserUpdateData {
+  username?: string;
+  email?: string;
+  age?: number;
+  password?: string;
+}

@@ -21,8 +21,10 @@ async def get_user_by_email_or_username(session: AsyncSession, email: str = None
 
 
 async def get_user_by_id(session: AsyncSession, user_id: int):
-    query = select(User).where(User.is_deleted == False, User.id == user_id)
+    query = select(User).where(User.id == user_id)
     result = await session.execute(query)
+    if not result:
+        raise HTTPException(status_code=404, detail="User not found")
     return result.scalars().one_or_none()
 
 
