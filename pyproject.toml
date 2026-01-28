@@ -1,0 +1,18 @@
+[project]
+name = "musicmigration"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "asyncpg>=0.31.0",
+    "fastapi[standard]>=0.128.0",
+    "greenlet>=3.3.1",
+    "passlib[argon2]>=1.7.4",
+    "psycopg2-binary>=2.9.11",
+    "pwdlib[argon2]>=0.3.0",
+    "pyjwt>=2.10.1",
+    "python-dotenv>=1.2.1",
+    "sqlalchemy>=2.0.46",
+    "sqlmodel>=0.0.31",
+]
